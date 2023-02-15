@@ -1,0 +1,91 @@
+﻿<%@ Master Language="VB" CodeFile="AdminMasterPage.master.vb" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1000px;
+            border: 1px solid #008000;
+        }
+        .style2
+        {
+            width: 100%;
+            border: 1px solid #000080;
+        }
+        .style3
+        {
+            width: 100%;
+            border: 1px solid #800080;
+        }
+        .style4
+        {
+            width: 100%;
+            border: 1px solid #808000;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="style1" align="center">
+            <tr>
+                <td>
+                    <table class="style2">
+                        <tr>
+                            <td align="center" bgcolor="#66FF99" 
+                                style="font-family: 'MS Sans Serif'; font-size: 60pt; font-weight: bold; color: #003300">
+                                Admin Home Area</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style4">
+                        <tr>
+                            <td align="left" height="350px" valign="top" width="200px">
+                                Welcome...
+                                <asp:Label ID="lbluname" runat="server"></asp:Label>
+&nbsp;!!!!<br />
+                                <br />
+                                <asp:LinkButton ID="lbtnhome" runat="server">Home</asp:LinkButton>
+                                <br />
+                                <asp:LinkButton ID="lbtnviewfaculty" runat="server">Faculty Details</asp:LinkButton>
+                                <br />
+                                <asp:LinkButton ID="lbtnfeedback" runat="server">Feedbacks</asp:LinkButton>
+                                <br />
+                                <asp:LinkButton ID="lbtnlogout" runat="server">Logout</asp:LinkButton>
+                            </td>
+                            <td height="350px" valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style3">
+                        <tr>
+                            <td align="center" bgcolor="#66FF99" 
+                                
+                                style="font-family: 'MS Sans Serif'; font-size: 30pt; font-weight: bold; color: #003300">
+                                &copy; Copyright Reserved. (Dr. Nikisha Jariwala)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

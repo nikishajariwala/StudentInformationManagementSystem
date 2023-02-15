@@ -1,0 +1,111 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            width: 175px;
+        }
+        .style3
+        {
+            width: 100%;
+            border: 1px solid #000080;
+        }
+        .style4
+        {
+            width: 100%;
+            border: 1px solid #800080;
+        }
+        .style5
+        {
+            width: 100%;
+            border: 1px solid #800000;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table border="1" style="border: medium dotted #008000" 
+            width="1000px" align="center">
+            <tr>
+                <td>
+                    <table class="style1">
+                        <tr>
+                            <td class="style2">
+                                <asp:Image ID="Image1" runat="server" Height="150px" 
+                                    ImageUrl="~/Images/tmtlogo.jpg" Width="200px" />
+                            </td>
+                            <td>
+                                <asp:Image ID="Image2" runat="server" Height="150px" 
+                                    ImageUrl="~/Images/tmtbanner.jpg" Width="800px" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style4">
+                        <tr>
+                            <td width="200">
+                                <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/XMLFile.xml" 
+                                    Height="200px" Width="200px" />
+                            </td>
+                            <td width="300">
+                                <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                            </td>
+                            <td>
+                                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                                </asp:SiteMapPath>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style5">
+                        <tr>
+                            <td align="left" height="600px" valign="top" width="200px">
+                                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
+                                    ShowLines="True">
+                                </asp:TreeView>
+                                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                            </td>
+                            <td align="left" height="600px" valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style3">
+                        <tr>
+                            <td align="center" 
+                                style="background-color: #00FFFF; font-family: 'Courier New', Courier, monospace; font-size: x-large; font-weight: bold">
+                                &copy; Copyrights Reserved. Dr. Nikisha Jariwala</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

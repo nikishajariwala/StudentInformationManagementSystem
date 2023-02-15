@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Images/hotel1.jpg</ImageUrl>
+    <NavigateUrl>http://www.google.com</NavigateUrl>
+    <AlternateText>This is an Ad for 1 Hotel.</AlternateText>
+    <Keywords>hotel</Keywords>
+    <Impressions>2</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Images/hotel2.jpg</ImageUrl>
+    <NavigateUrl>http://www.tmtbcasurat.org</NavigateUrl>
+    <AlternateText>This is an Ad for 2nd Hotel.</AlternateText>
+    <Keywords>hotel2</Keywords>
+    <Impressions>1</Impressions>
+  </Ad>
+</Advertisements>

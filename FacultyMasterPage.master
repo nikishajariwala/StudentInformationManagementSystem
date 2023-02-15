@@ -1,0 +1,97 @@
+﻿<%@ Master Language="VB" CodeFile="FacultyMasterPage.master.vb" Inherits="FacultyMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1000px;
+            border: 2px solid #008000;
+        }
+        .style2
+        {
+            width: 100%;
+            border: 1px solid #800080;
+        }
+        .style3
+        {
+            width: 100%;
+            border: 1px solid #0000FF;
+        }
+        .style4
+        {
+            width: 100%;
+            border: 1px solid #000080;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        <table class="style1" align="center">
+            <tr>
+                <td>
+                    <table class="style2">
+                        <tr>
+                            <td align="center" bgcolor="#FF99FF" 
+                                style="font-family: 'MS Sans Serif'; font-size: 72pt; font-weight: bold; color: #800000">
+                                Faculty Home Area</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style4">
+                        <tr>
+                            <td align="left" height="350px" valign="top" width="200px">
+                                Welcome...
+                                <asp:Label ID="lbluname" runat="server"></asp:Label>
+                                <br />
+                                <br />
+                                <asp:Menu ID="Menu1" runat="server">
+                                    <Items>
+                                        <asp:MenuItem NavigateUrl="~/facultyHome.aspx" Text="Home" Value="Home">
+                                        </asp:MenuItem>
+                                        <asp:MenuItem Text="Student Details" Value="Student Details">
+                                            <asp:MenuItem NavigateUrl="~/ViewStudents.aspx" Text="View Students" 
+                                                Value="View Students"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/GetStudentDetails.aspx" Text="Get Student Details" 
+                                                Value="Get Student Details"></asp:MenuItem>
+                                        </asp:MenuItem>
+                                        <asp:MenuItem NavigateUrl="~/Index.aspx" Text="Logout" Value="Logout">
+                                        </asp:MenuItem>
+                                    </Items>
+                                </asp:Menu>
+                            </td>
+                            <td height="350px" valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style3">
+                        <tr>
+                            <td align="center" bgcolor="#FF66FF" 
+                                style="font-family: 'MS Sans Serif'; font-size: xx-large; font-weight: bold; color: #660033">
+                                &copy; Copyright Reserved. Dr. Nikisha Jariwala (Faculty Home Area)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+    </form>
+</body>
+</html>

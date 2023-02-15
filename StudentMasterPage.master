@@ -1,0 +1,97 @@
+﻿<%@ Master Language="VB" CodeFile="StudentMasterPage.master.vb" Inherits="StudentMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 1000px;
+            border: 2px solid #800080;
+        }
+        .style2
+        {
+            width: 100%;
+            border: 1px solid #008000;
+        }
+        .style3
+        {
+            width: 100%;
+            border: 1px solid #0000FF;
+        }
+        .style4
+        {
+            width: 148px;
+        }
+        .style5
+        {
+            width: 100%;
+            border: 1px solid #800000;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        <table class="style1" align="center">
+            <tr>
+                <td>
+                    <table class="style2">
+                        <tr>
+                            <td align="center" bgcolor="#FFCC00" 
+                                style="font-family: 'MS Sans Serif'; font-size: xx-large; font-weight: bold; color: #660066">
+                                Student Home Area</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style3">
+                        <tr>
+                            <td class="style4" height="350" valign="top">
+                                Welcome..
+                                <asp:Label ID="lbluname" runat="server"></asp:Label>
+                                <br />
+                                <asp:LinkButton ID="lbtnlogout" runat="server">Logout</asp:LinkButton>
+                                <br />
+                                <asp:ImageButton ID="ibtnhome" runat="server" Height="20px" 
+                                    ImageUrl="~/Images/hotel3.jpg" Width="70px" />
+                                <br />
+                                <asp:HyperLink ID="HyperLink1" runat="server" 
+                                    NavigateUrl="~/ListOfCourses.aspx">List of Courses</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Subjects.aspx">Subjects</asp:HyperLink>
+                                <br />
+                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/UploadPhoto.aspx">Upload Pic</asp:HyperLink>
+                            </td>
+                            <td valign="top" height="350">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style5">
+                        <tr>
+                            <td align="center" bgcolor="#FFCC00" 
+                                style="font-family: 'MS Sans Serif'; font-size: medium; font-weight: bold; color: #000080">
+                                &copy; Copyrights Reserved. Dr. Nikisha Jariwala (Student home area)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+    </form>
+</body>
+</html>
